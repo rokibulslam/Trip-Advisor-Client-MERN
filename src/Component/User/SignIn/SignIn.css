@@ -1,0 +1,22 @@
+.text-color {
+    color: black;
+    font-size: 50px;
+}
+
+.sign-in {
+    width: 300px;
+    padding: 5px;
+    background-color: red;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+}
+
+.googlesign-in {
+    width: 300px;
+    padding: 5px;
+    background-color: rgb(31, 169, 173);
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+}
