@@ -10,17 +10,18 @@ const MyOrders = () => {
             .then(res => res?.json())
             .then(data=> setOrders(data))
     }, [])
+    
+
     console.log(orders)
-
-
     return (
         <div>
             <h1>Name: {orders[0]?.name}</h1>
             {
                 orders?.map(order => (
                     <div className="row" key={order._id}>
-                        <div>
-                            <img src={order.img} alt="" />
+                        <div className="col-md-6">
+                            <img className="img-fluid" src={order.service.img} alt="" />
+                            <h4>{order.service.name}</h4>
                         </div>
                     </div>
                 ))
