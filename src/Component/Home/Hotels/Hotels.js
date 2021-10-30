@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './Services.css'
+import './Hotels.css'
 
-const Services = () => {
-    const [services, setServices] = useState([])
+const Hotels = () => {
+    const [Hotels, setHotels] = useState([])
 
     useEffect(() => {
         fetch("./services.json")
             .then(res => res.json())
-            .then(data=>setServices(data))
+            .then(data=>setHotels(data))
     }, [])
     
 
@@ -20,7 +20,7 @@ const Services = () => {
                 <h1 className="text-center p-5">Our Promise For A New Kind Of Caring</h1>
             <div className="row">
             {
-                services?.map(service=>
+                Hotels?.map(service=>
                     <div
                         key={service._id}
                         className="col-md-3 g-4">
@@ -44,4 +44,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default Hotels;

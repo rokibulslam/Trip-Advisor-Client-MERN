@@ -1,5 +1,5 @@
 import React from 'react';
-import Services from '../Services/Services';
+import Services from '../Hotels/Hotels';
 
 const Home = () => {
     return (

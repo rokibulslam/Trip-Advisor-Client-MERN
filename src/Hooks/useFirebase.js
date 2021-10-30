@@ -22,9 +22,9 @@ const auth = getAuth();
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const [error, setError] = useState('')
+    console.log(user)
     const [isLoading, setIsLoading] = useState(true)
     const [name, setName] = useState('')
-    console.log(user)
     const gooleSignIn = () => {
         setIsLoading(true)
         const googleProvider = new GoogleAuthProvider();

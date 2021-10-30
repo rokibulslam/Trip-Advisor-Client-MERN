@@ -8,16 +8,18 @@ const AddHotel = () => {
     const {
         register,
         handleSubmit,
-        watch,
+        reset,
         formState: {
             errors
         }
     } = useForm();
     const onSubmit = (data) => {
-        console.log(data);
         axios.post('http://localhost:5000/hotels', data)
             .then(res => {
-            console.log(res)
+                if (res.data.insertedId) {
+                    alert("New Hotel Added Successfully")
+                    reset();
+                }
         })
     }; // your form submit function which will invoke after successful validation
 
