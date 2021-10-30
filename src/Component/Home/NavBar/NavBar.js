@@ -17,7 +17,7 @@ const NavBar = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
                 <Nav.Link as={HashLink} className="text-decoration-none fw-bold text-white"  to="/home#home">Home</Nav.Link>
-                <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white"  to="/home#services">Services</Nav.Link>
+                <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white"  to="/home#hotels">Services</Nav.Link>
                 <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white" to="/appoint">Appoinment</Nav.Link>
                 <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white" to="/experience">Patient Experience</Nav.Link>
                 <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white" to="/about">About Us</Nav.Link>

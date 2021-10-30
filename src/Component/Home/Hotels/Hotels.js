@@ -16,7 +16,7 @@ const Hotels = () => {
 
     return (
         <div className="bg-color">
-            <div id="services" className="container py-5 ">
+            <div id="hotels" className="container py-5 ">
                 <h1 className="text-center p-5">Our Promise For A New Kind Of Caring</h1>
             <div className="row">
             {
@@ -31,7 +31,7 @@ const Hotels = () => {
                         <Card.Text>
                         {hotel.Description.slice(0, 100)}
                         </Card.Text>
-                        <Link to={`/service/${hotel._id}`}>
+                        <Link to={`/placeOrder/${hotel._id}`}>
                             <Button className="btn-grad">Book Now</Button>
                         </Link>
                     </Card.Body>
