@@ -1,35 +1,41 @@
 [{
         
         "name": "The Marlin Hotel",
+        "price": "300",
         "description": "At The Marlin Hotel we take standards for hygiene and cleanliness very seriously and are taking additional steps to ensure the safety of our guests, employees, and our community.Our hotel’ s health and sanitation measures are designed to address a broad spectrum of bacteria and viruses, including COVID - 19 ",
         "imageURL": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/32/c0/fa/the-marlin-hotel.jpg?w=500&h=400&s=1"
     },
     {
         "name": "Nautilus by Arlo",
+        "price": "350",
         "description": "If you are looking for a romantic hotel in Miami Beach, don't miss Nautilus by Arlo. Nearby landmarks such as the Holocaust Memorial(0.8 km) and The Wolfsonian - Florida International University(1.5 km) make Continental South Beach a great place to stay when visiting Miami Beach.",
         "imageURL": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d3/bd/ca/nautilus-s-light-filled.jpg?w=500&h=400&s=1"
     },
     {
-       
+        
         "name": "Hotel South Beach",
+        "price": "400",
         "description": "Rest easy, we’ve got your back. We’ve carefully reimagined the 1 Hotel South Beach experience for your safety and health. Learn more at 1hotels.com/covid-19.1 Hotel South Beach is a great choice for travelers visiting Miami Beach, offering a romantic atmosphere, as well as numerous services designed to enhance your stay.",
         "imageURL": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/f1/ff/49/1-hotel-south-beach-aerial.jpg?w=500&h=-1&s=1"
     },
     {
        
         "name": "Fontainebleau",
+        "price": "450",
         "description": "Fontainebleau is a great choice for travelers visiting Miami Beach, offering a romantic setting as well as numerous amenities designed to enhance your stay.During their stay at Fontainebleau Resort, guests can visit the Holocaust Memorial (2.8 km) and The Fillmore Miami Beach at the Jackie Gleason Theater (2.9 km), some of Miami Beach's top attractions.",
         "imageURL": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/a5/b1/31/exterior.jpg?w=500&h=400&s=1"
     },
     {
         
         "name": "Shelborne South Beach",
+        "price": "500",
         "description": "You'll enjoy relaxing rooms that offer a flat screen TV, air conditioning, and a minibar, and you can stay connected during your stay as Shelborne South Beach Hotel offers guests free wifi.",
         "imageURL": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/16/13/16/shelborne-south-beach.jpg?w=500&h=400&s=1"
     },
     {
         
         "name": "The Palms Hotel & Spa",
+        "price": "600",
         "description": "For those interested in visiting well-known landmarks during their trip to Miami Beach, Palms South Beach is close to the Holocaust Memorial (1.7 km) and Art Deco Tours (2.2 km).",
         "imageURL": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f5/7d/5d/oceanfront-junior-suite.jpg?w=500&h=400&s=1"
     }

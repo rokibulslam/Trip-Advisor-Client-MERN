@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AddHotel from './Component/Admin/AddHotel/AddHotel';
 import Home from './Component/Home/Home/Home';
 import NavBar from './Component/Home/NavBar/NavBar';
 import SignIn from './Component/User/SignIn/SignIn';
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/signUp">
               <SignUp></SignUp>
+            </Route>
+            <Route path="/addHotel">
+              <AddHotel></AddHotel>
             </Route>
           </Switch>
       
