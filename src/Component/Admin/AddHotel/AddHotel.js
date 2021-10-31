@@ -19,6 +19,7 @@ const AddHotel = () => {
                 if (res.data.insertedId) {
                     alert("New Hotel Added Successfully")
                     reset();
+                    window.location.reload()
                 }
         })
     }; // your form submit function which will invoke after successful validation

@@ -13,7 +13,7 @@ const ManageOrder = () => {
     console.log(orders)
 
     const handlePending = (id) => {
-        axios.put(`http://localhost:5000/update/${id}`, {status: "Approved"})
+        axios.put(`http://localhost:5000/updateStatus/${id}`, {status: "Approved"})
             .then(res => {
                 if (res.data.acknowledged) {
                     alert('Approved Order')
