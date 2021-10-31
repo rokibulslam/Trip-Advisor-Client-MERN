@@ -3,6 +3,7 @@ import './App.css';
 import AddHotel from './Component/Admin/AddHotel/AddHotel';
 import AdminDashBoard from './Component/Admin/AdminDashBoard/AdminDashBoard';
 import DeleteService from './Component/DeleteService/DeleteService';
+import Footer from './Component/Home/Footer/Footer';
 import Home from './Component/Home/Home/Home';
 import NavBar from './Component/Home/NavBar/NavBar';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
@@ -45,7 +46,7 @@ function App() {
             </PrivateRoute>
             
           </Switch>
-      
+            <Footer></Footer>
       </Router>
       </AuthProvider>
     </div>
