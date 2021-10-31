@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCSK2JinaMayg_XssChQAhmcliO89q2IFw",
-    authDomain: "trip-advisor-vip.firebaseapp.com",
-    projectId: "trip-advisor-vip",
-    storageBucket: "trip-advisor-vip.appspot.com",
-    messagingSenderId: "221139103731",
-    appId: "1:221139103731:web:3f41a5b1ec04d25fc62c86"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
 };
 
 export default firebaseConfig;
