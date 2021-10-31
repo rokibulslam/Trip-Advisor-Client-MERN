@@ -3,6 +3,8 @@ import './App.css';
 import About from './Component/About/About';
 import AddHotel from './Component/Admin/AddHotel/AddHotel';
 import AdminDashBoard from './Component/Admin/AdminDashBoard/AdminDashBoard';
+import ManageAllProduct from './Component/Admin/ManageAllProduct/ManageAllProduct';
+import ManageOrder from './Component/Admin/ManageOrder/ManageOrder';
 import UpdateService from './Component/Admin/UpdateService/UpdateService';
 import DeleteService from './Component/DeleteService/DeleteService';
 import Footer from './Component/Home/Footer/Footer';
@@ -46,6 +48,15 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/myOrders">
               <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute path="/allOrders">
+              <ManageOrder></ManageOrder>
+            </PrivateRoute>
+            <PrivateRoute path="/manageProducts">
+              <ManageAllProduct></ManageAllProduct>
+            </PrivateRoute>
+            <PrivateRoute path="/addHotel">
+              <AddHotel></AddHotel>
             </PrivateRoute>
             <Route path="/about">
               <About></About>
