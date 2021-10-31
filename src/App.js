@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import About from './Component/About/About';
 import AddHotel from './Component/Admin/AddHotel/AddHotel';
 import AdminDashBoard from './Component/Admin/AdminDashBoard/AdminDashBoard';
 import UpdateService from './Component/Admin/UpdateService/UpdateService';
@@ -46,6 +47,9 @@ function App() {
             <PrivateRoute path="/myOrders">
               <MyOrders></MyOrders>
             </PrivateRoute>
+            <Route path="/about">
+              <About></About>
+            </Route>
             <Route path="*">
               <Notfound></Notfound>
             </Route>

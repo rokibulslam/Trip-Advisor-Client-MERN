@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import './AddHotel.css'
 
 const AddHotel = () => {
     const {
@@ -26,10 +27,10 @@ const AddHotel = () => {
 
 
     return (
-        <div>
+        <div className="add-h pt-5 text-white">
             <h1>Add New Hotel</h1>
             <div className="d-flex justify-content-center align-content-center">
-                <form className="m-5 d-flex flex-column w-50" onSubmit={handleSubmit(onSubmit)}>
+                <form className="mb-5 d-flex flex-column w-50" onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
                 <p className="text-start">Name</p>
                 <input {...register("name", { required: true })} />
@@ -50,7 +51,7 @@ const AddHotel = () => {
                 {/* errors will return when field validation fails  */}
                 {errors.img && <p>This field is required</p>}
 
-                <input type="submit" />
+                <input className="fs-5 rounded-pill" type="submit" />
             </form>
             </div>
         </div>
