@@ -7,7 +7,7 @@ const ManageAllProduct = () => {
     const [Hotels, setHotels] = useState([])
     const [deletes, setDelete] = useState('')
     useEffect(() => {
-        fetch("http://localhost:5000/hotels")
+        fetch("https://frightening-cat-78341.herokuapp.com/hotels")
             .then(res => res.json())
             .then(data => setHotels(data))
     }, [deletes])
@@ -16,7 +16,7 @@ const ManageAllProduct = () => {
         const confirm = window.confirm('Are You Sure? You are going to cancel your order')
 
         if (confirm) {
-            axios.delete(`http://localhost:5000/deleteService/${id}`)
+            axios.delete(`https://frightening-cat-78341.herokuapp.com/${id}`)
                 .then(res => {
                     if (res.data.deletedCount) {
                         alert("Your Order Has Canceled")

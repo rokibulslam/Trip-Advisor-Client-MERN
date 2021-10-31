@@ -52,7 +52,7 @@ const Footer = () => {
                 
                 </ul>
                 <Form.Control type="email" placeholder="Enter Your Email" />
-                        <Button>Subscribe</Button>
+                        <Button className="m-3">Subscribe</Button>
                         <div className="pt-3">
                             <a className="px-2 text-white" href="https://www.facebook.com/" >{facebook}</a>
                     <a className="px-2 text-white" href="https://www.facebook.com/" >{instgaram}</a>

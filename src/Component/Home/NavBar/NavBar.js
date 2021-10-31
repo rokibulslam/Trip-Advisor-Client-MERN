@@ -12,7 +12,7 @@ const NavBar = () => {
         <div>
             <Navbar className="nav-color sticky-top overflow-hidden navbar " variant="dark" collapseOnSelect expand="lg" >
             <Container>
-                    <Navbar.Brand className="fw-bolder text-white"><img className="rounded-3" alt="" /> PMC</Navbar.Brand>
+                    <Navbar.Brand className="fw-bolder text-white"><img className="rounded-3" alt="" />TAdvisor</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">

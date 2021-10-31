@@ -7,7 +7,7 @@ const Hotels = () => {
     const [Hotels, setHotels] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/hotels")
+        fetch("https://frightening-cat-78341.herokuapp.com/hotels")
             .then(res => res.json())
             .then(data=>setHotels(data))
     }, [])

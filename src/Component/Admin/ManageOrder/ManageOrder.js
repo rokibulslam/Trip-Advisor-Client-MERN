@@ -6,13 +6,15 @@ const ManageOrder = () => {
     const [orders, setOrders] = useState([])
     const [deletes, setDelete] = useState('')
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://frightening-cat-78341.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [deletes])
 
     const handlePending = (id) => {
-        axios.put(`http://localhost:5000/updateStatus/${id}`, {status: "Approved"})
+        axios.put(`https://frightening-cat-78341.herokuapp.com/updateStatus/${id}`, {
+            status: "Approved"
+        })
             .then(res => {
                 if (res.data.acknowledged) {
                     alert('Approved Order')
@@ -26,7 +28,7 @@ const ManageOrder = () => {
         const confirm = window.confirm('Are You Sure? You are going to cancel your order')
 
         if (confirm) {
-            axios.delete(`http://localhost:5000/delete/${id}`)
+            axios.delete(`https://frightening-cat-78341.herokuapp.com/delete/${id}`)
                 .then(res => {
                     if (res.data.deletedCount) {
                         alert("Your Order Has Canceled")

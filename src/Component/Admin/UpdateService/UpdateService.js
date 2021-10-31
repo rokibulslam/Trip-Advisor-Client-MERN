@@ -17,7 +17,7 @@ const UpdateService = () => {
         }
     } = useForm();
     const onSubmit = (data) => {
-        axios.put(`http://localhost:5000/updateService/${upId}`, data)
+        axios.put(`https://frightening-cat-78341.herokuapp.com/updateService/${upId}`, data)
             .then(res => {
                 if (res.data.acknowledged) {
                     alert("Updated Successfully")

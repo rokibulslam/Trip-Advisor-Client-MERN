@@ -10,7 +10,7 @@ const PlaceOrder = () => {
 
     const [service, setService] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/hotels/${id}`)
+        fetch(`https://frightening-cat-78341.herokuapp.com/hotels/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
@@ -32,7 +32,7 @@ const PlaceOrder = () => {
         data.service = service
         data.email = user?.email;
         data.status = "pending"
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://frightening-cat-78341.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("New Order Successfully Placed for Approving")

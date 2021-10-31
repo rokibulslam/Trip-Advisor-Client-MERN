@@ -12,7 +12,7 @@ const AddHotel = () => {
         }
     } = useForm();
     const onSubmit = (data) => {
-        axios.post('http://localhost:5000/hotels', data)
+        axios.post('https://frightening-cat-78341.herokuapp.com/hotels', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("New Hotel Added Successfully")
