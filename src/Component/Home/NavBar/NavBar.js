@@ -18,8 +18,8 @@ const NavBar = () => {
                 <Nav className="me-auto">
                 <Nav.Link as={HashLink} className="text-decoration-none fw-bold text-white"  to="/home#home">Home</Nav.Link>
                 <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white"  to="/home#hotels">Services</Nav.Link>
-                <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white" to="/appoint">Appoinment</Nav.Link>
-                <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white" to="/experience">Patient Experience</Nav.Link>
+                {user?.email ? <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white" to="/myOrders">My Order</Nav.Link>: ''}
+                {user?.email ? <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white" to="/admin">Admin Dashboard</Nav.Link> : ''}
                 <Nav.Link as={HashLink} className="text-decoration-none px-3 fw-bold text-white" to="/about">About Us</Nav.Link>
                 </Nav>
                 <Nav className="justify-content-center align-items-center">
