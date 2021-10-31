@@ -17,7 +17,7 @@ const Hotels = () => {
     return (
         <div className="bg-color">
             <div id="hotels" className="container py-5 ">
-                <h1 className="text-center p-5">Our Promise For A New Kind Of Caring</h1>
+                <h1 className="text-center p-5 info-text fs-1 fw-bolder">Let's The Journey Begin....</h1>
             <div className="row">
             {
                 Hotels?.map(hotel=>
