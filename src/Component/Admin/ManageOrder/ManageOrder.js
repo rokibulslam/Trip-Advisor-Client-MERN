@@ -38,8 +38,9 @@ const ManageOrder = () => {
         }
     }
     return (
-        <div>
+        <div className="container pt-5">
             <div>
+                <h1 className="fw-light">Manage All Orders</h1>
             <Table striped bordered hover>
             <thead>
                 <tr>
@@ -47,7 +48,6 @@ const ManageOrder = () => {
                 <th>Ordered BY</th>
                 <th>Adress</th>
                 <th>Status</th>
-                <th>Product</th>
                 </tr>
             </thead>
             {
@@ -55,12 +55,10 @@ const ManageOrder = () => {
                     <tbody>
                         <tr>
                         <td>1</td>
-                        <td>{order.name} <br />{order.city}<br />{order.country}<br />{order.email}<br />{order.phone}</td>
-                        <td>${order.service.price}<br />{order.service.name}</td>
+                        <td>Customer Name: {order.name} <br />City :{order.city}<br />Country: {order.country}<br />Email: {order.email}<br />Phone No: {order.phone}</td>
+                        <td>Service Price: ${order.service.price}<br />Service Name: {order.service.name}</td>
                         <td className="text-danger">{order.status}</td>
-                        <td></td>
-                        
-                        <td><button onClick={()=>handleDelete(order._id)}>Cancel Order</button> <br /><button onClick={()=>handlePending(order._id)}>Approved Order</button></td>
+                        <td><button className="btn btn-danger m-2" onClick={()=>handleDelete(order._id)}>Cancel Order</button> <br /><button className="btn btn-success" onClick={()=>handlePending(order._id)}>Approved Order</button></td>
                         </tr> 
                     </tbody>
                 ))        

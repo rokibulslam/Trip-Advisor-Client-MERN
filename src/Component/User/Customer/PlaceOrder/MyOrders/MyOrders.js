@@ -32,32 +32,34 @@ const MyOrders = () => {
     }
     console.log(orders)
     return (
-        <div>
-            <Table striped bordered hover>
-            <thead>
-                <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Adress</th>
-                <th>Status</th>
-                <th>Product</th>
-                </tr>
-            </thead>
-            {
-                    orders?.map(order => (
-                    <tbody>
-                        <tr>
-                        <td>1</td>
-                        <td>{order.name}</td>
-                        <td>{order.city}<br />{order.country}<br />{order.email}<br />{order.phone}</td>
-                        <td className="text-danger">{order.status}</td>
-                        <td>${order.service.price}<br />{order.service.name}</td>
-                        <td><button onClick={()=>handleDelete(order._id)}>Cancel Order</button></td>
-                        </tr> 
-                    </tbody>
-                ))        
-            }
-            </Table>
+        <div className="my-5">
+            <h1 className="fw-normal p-2">My Orders</h1>
+            {orders.length ?
+                <div className="container">
+                    <Table striped bordered hover>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Adress</th>
+                                <th>Status</th>
+                                <th>Product</th>
+                            </tr>
+                        </thead>
+                        {
+                            orders?.map(order => (
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>{order.name} <br />{order.city}<br />{order.country}<br />{order.email}<br />{order.phone}</td>
+                                        <td className="text-danger">{order.status}</td>
+                                        <td>${order.service.price}<br />{order.service.name}</td>
+                                        <td><button className="btn btn-danger" onClick={() => handleDelete(order._id)}>Cancel Order</button></td>
+                                    </tr>
+                                </tbody>
+                            ))
+                        }
+                    </Table>
+                </div> : <h1>You have 0 Orders</h1>}
         </div>
     );
 };
