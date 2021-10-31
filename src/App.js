@@ -7,6 +7,7 @@ import DeleteService from './Component/DeleteService/DeleteService';
 import Footer from './Component/Home/Footer/Footer';
 import Home from './Component/Home/Home/Home';
 import NavBar from './Component/Home/NavBar/NavBar';
+import Notfound from './Component/Notfound/Notfound';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import MyOrders from './Component/User/Customer/PlaceOrder/MyOrders/MyOrders';
 import PlaceOrder from './Component/User/Customer/PlaceOrder/PlaceOrder';
@@ -36,9 +37,6 @@ function App() {
             <PrivateRoute path="/admin">
               <AdminDashBoard></AdminDashBoard>
             </PrivateRoute>
-            {/* <PrivateRoute path="/addHotel">
-              <AddHotel></AddHotel>
-            </PrivateRoute> */}
             <PrivateRoute path="/placeOrder/:id">
                 <PlaceOrder></PlaceOrder>
             </PrivateRoute>
@@ -48,7 +46,9 @@ function App() {
             <PrivateRoute path="/myOrders">
               <MyOrders></MyOrders>
             </PrivateRoute>
-            
+            <Route path="*">
+              <Notfound></Notfound>
+            </Route>
           </Switch>
             <Footer></Footer>
       </Router>
