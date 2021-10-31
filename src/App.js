@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AddHotel from './Component/Admin/AddHotel/AddHotel';
 import AdminDashBoard from './Component/Admin/AdminDashBoard/AdminDashBoard';
+import UpdateService from './Component/Admin/UpdateService/UpdateService';
 import DeleteService from './Component/DeleteService/DeleteService';
 import Footer from './Component/Home/Footer/Footer';
 import Home from './Component/Home/Home/Home';
@@ -40,6 +41,9 @@ function App() {
             </PrivateRoute> */}
             <PrivateRoute path="/placeOrder/:id">
                 <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
+            <PrivateRoute path="/update/:upId">
+              <UpdateService></UpdateService>
             </PrivateRoute>
             <PrivateRoute path="/myOrders">
               <MyOrders></MyOrders>

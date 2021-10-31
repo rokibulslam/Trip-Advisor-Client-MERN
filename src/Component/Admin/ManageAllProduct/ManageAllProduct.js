@@ -20,6 +20,7 @@ const ManageAllProduct = () => {
                 .then(res => {
                     if (res.data.deletedCount) {
                         alert("Your Order Has Canceled")
+                        window.location.reload()
                     }
                 })
                 .then(data => setDelete(data))
@@ -43,7 +44,9 @@ const ManageAllProduct = () => {
                         {hotel.Description.slice(0, 100)}
                         </Card.Text>
                         <div className="d-flex justify-content-around">
-                            <Button>Book Now</Button>
+                        <Link to={`/update/${hotel._id}`}>
+                            <Button className="btn-success">Update</Button>
+                        </Link>
                             <Button onClick={()=>{handleDelete(hotel._id)}} className="btn-danger">Delete</Button>
                         </div>
                     </Card.Body>

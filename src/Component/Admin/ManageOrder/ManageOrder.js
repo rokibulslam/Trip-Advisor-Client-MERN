@@ -10,13 +10,13 @@ const ManageOrder = () => {
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [deletes])
-    console.log(orders)
 
     const handlePending = (id) => {
         axios.put(`http://localhost:5000/updateStatus/${id}`, {status: "Approved"})
             .then(res => {
                 if (res.data.acknowledged) {
                     alert('Approved Order')
+                    window.location.reload()
                 }
             })
             .then(data => setDelete(data) )

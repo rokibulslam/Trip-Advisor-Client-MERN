@@ -1,8 +1,13 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router';
 
-const AddHotel = () => {
+
+
+const UpdateService = () => {
+    const { upId } = useParams()
+    console.log(upId)
     const {
         register,
         handleSubmit,
@@ -12,10 +17,10 @@ const AddHotel = () => {
         }
     } = useForm();
     const onSubmit = (data) => {
-        axios.post('http://localhost:5000/hotels', data)
+        axios.put(`http://localhost:5000/updateService/${upId}`, data)
             .then(res => {
-                if (res.data.insertedId) {
-                    alert("New Hotel Added Successfully")
+                if (res.data.acknowledged) {
+                    alert("Updated Successfully")
                     reset();
                     window.location.reload()
                 }
@@ -28,7 +33,7 @@ const AddHotel = () => {
     return (
         <div>
             <h1>Add New Hotel</h1>
-            <div className="d-flex justify-content-center align-content-center">
+            <div className="d-flex align-content-center justify-content-center">
                 <form className="m-5 d-flex flex-column w-50" onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
                 <p className="text-start">Name</p>
@@ -57,4 +62,4 @@ const AddHotel = () => {
     );
 };
 
-export default AddHotel;
+export default UpdateService;

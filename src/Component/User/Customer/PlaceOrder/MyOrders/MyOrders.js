@@ -24,6 +24,7 @@ const MyOrders = () => {
                  .then(res => {
                      if (res.data.deletedCount) {
                          alert("Your Order Has Canceled")
+                         window.location.reload()
                      }
                  })
                  .then(data => setDelete(data))
