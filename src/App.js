@@ -6,7 +6,6 @@ import AdminDashBoard from './Component/Admin/AdminDashBoard/AdminDashBoard';
 import ManageAllProduct from './Component/Admin/ManageAllProduct/ManageAllProduct';
 import ManageOrder from './Component/Admin/ManageOrder/ManageOrder';
 import UpdateService from './Component/Admin/UpdateService/UpdateService';
-import DeleteService from './Component/DeleteService/DeleteService';
 import Footer from './Component/Home/Footer/Footer';
 import Home from './Component/Home/Home/Home';
 import NavBar from './Component/Home/NavBar/NavBar';

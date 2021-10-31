@@ -43,7 +43,8 @@ const ManageOrder = () => {
             <div className="container ">
             <div>
                 <h1 className="fw-light">Manage All Orders</h1>
-            <Table Table striped bordered hover variant = "dark" >
+            <Table responsive = "sm"
+            striped bordered hover variant = "dark" >
             <thead>
                 <tr>
                 <th>#</th>
@@ -60,7 +61,8 @@ const ManageOrder = () => {
                         <td>1</td>
                         <td>Customer Name: {order.name} <br />City :{order.city}<br />Country: {order.country}<br />Email: {order.email}<br />Phone No: {order.phone}</td>
                         <td>Service Price: ${order.service.price}<br />Service Name: {order.service.name}</td>
-                        <td className="text-white">{order.status}</td>
+                        {order.status=== 'Approved' ? <td className="text-white">{order.status}</td>: <td className="text-danger">{order.status}</td>}
+                        
                         <td><button className="btn btn-danger m-2" onClick={()=>handleDelete(order._id)}>Cancel Order</button> <br /><button className="btn btn-success" onClick={()=>handlePending(order._id)}>Approved Order</button></td>
                         </tr> 
                     </tbody>
