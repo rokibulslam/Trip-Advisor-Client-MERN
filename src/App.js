@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AddHotel from './Component/Admin/AddHotel/AddHotel';
+import AdminDashBoard from './Component/Admin/AdminDashBoard/AdminDashBoard';
 import DeleteService from './Component/DeleteService/DeleteService';
 import Home from './Component/Home/Home/Home';
 import NavBar from './Component/Home/NavBar/NavBar';
@@ -30,9 +31,12 @@ function App() {
             <Route path="/signUp">
               <SignUp></SignUp>
             </Route>
-            <Route path="/addHotel">
+            <PrivateRoute path="/admin">
+              <AdminDashBoard></AdminDashBoard>
+            </PrivateRoute>
+            {/* <PrivateRoute path="/addHotel">
               <AddHotel></AddHotel>
-            </Route>
+            </PrivateRoute> */}
             <PrivateRoute path="/placeOrder/:id">
                 <PlaceOrder></PlaceOrder>
             </PrivateRoute>

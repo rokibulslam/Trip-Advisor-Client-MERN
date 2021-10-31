@@ -17,19 +17,21 @@ const MyOrders = () => {
     }, [deletes])
     
     const handleDelete = (id) => {
-         axios.delete(`http://localhost:5000/delete/${id}`)
-             .then(res => {
-                 if (res.data.deletedCount) {
-                     alert("New Order Successfully Placed for Approving")
-                 }
-             })
-             .then(data=> setDelete(data))
+        const confirm = window.confirm('Are You Sure? You are going to cancel your order')
+
+        if (confirm) {
+             axios.delete(`http://localhost:5000/delete/${id}`)
+                 .then(res => {
+                     if (res.data.deletedCount) {
+                         alert("Your Order Has Canceled")
+                     }
+                 })
+                 .then(data => setDelete(data))
+         }
     }
     console.log(orders)
     return (
         <div>
-            <h1>Name: {orders[0]?.name}</h1>
-            
             <Table striped bordered hover>
             <thead>
                 <tr>

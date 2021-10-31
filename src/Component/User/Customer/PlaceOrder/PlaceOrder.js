@@ -37,6 +37,7 @@ const PlaceOrder = () => {
                 if (res.data.insertedId) {
                     alert("New Order Successfully Placed for Approving")
                     reset();
+                    
                 }
             })
     };
