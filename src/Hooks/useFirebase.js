@@ -26,18 +26,10 @@ const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [name, setName] = useState('')
     const gooleSignIn = () => {
-        setIsLoading(true)
+        
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const user = result.user;
-                setUser(user)
-            })
-            .catch(error => {
-                const errorMessage = error.message;
-                setError(errorMessage)
-            })
-            .finally(() => setIsLoading(false));
+        return signInWithPopup(auth, googleProvider);
+            
     }
     const reload = () => {
         window.location.reload()
@@ -73,18 +65,9 @@ const useFirebase = () => {
     }
 
     const signIn = (email, password) => {
-        setIsLoading(true)
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const user = result.user;
-                setUser(user)
-                setError('')
-            })
-            .catch(error => {
-                const errorMessage = error.message;
-                setError(errorMessage)
-            })
-            .finally(() => setIsLoading(false))
+        
+        return signInWithEmailAndPassword(auth, email, password)
+            
 
     }
     useEffect(() => {
@@ -116,7 +99,9 @@ const useFirebase = () => {
         isLoading,
         setName,
         setError,
-        name
+        name,
+        setIsLoading,
+        setUser
     }
 
 }

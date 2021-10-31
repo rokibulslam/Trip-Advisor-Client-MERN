@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { Button,  Col,  Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import './SignIn.css'
 
 
 
 const SignIn = () => {
-    const {signIn, error, gooleSignIn}=useAuth()
+    const {signIn, error, gooleSignIn, setError, setIsLoading, setUser}=useAuth()
     const [email, setEmail] = useState('')
     const [password, setPassword]= useState('')
+    
+    const history = useHistory()
+    const location = useLocation()
+    const url= location.state?.from || "/home"
     
     const getEmail = (e) => {
         setEmail(e.target.value)
@@ -20,9 +24,34 @@ const SignIn = () => {
 
     const handleSignIn = (e) => {
         e.preventDefault()
-        signIn(email, password);
+        signIn(email, password)
+            .then(result => {
+                setIsLoading(true)
+                const user = result.user;
+                setUser(user)
+                setError('')
+                history.push(url)
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                setError(errorMessage)
+            })
+            .finally(() => setIsLoading(false))
     }
-
+    const HandleGooleSignIn = () => {
+        gooleSignIn()
+        .then(result => {
+                setIsLoading(true)
+                const user = result.user;
+                setUser(user)
+                history.push(url)
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                setError(errorMessage)
+            })
+            .finally(() => setIsLoading(false));
+    }
 
     return (
         <div className="my-5 overflow-hidden pb-5">
@@ -46,7 +75,7 @@ const SignIn = () => {
             </button>   
             </Form>
             <h4 className="text-center">Or</h4>
-            <button className="googlesign-in text-white d-flex" onClick={gooleSignIn}><img className="mx-3" height="30px"  alt="" /> Sign in with google</button>
+            <button className="googlesign-in text-white d-flex" onClick={HandleGooleSignIn}><img className="mx-3" height="30px"  alt="" /> Sign in with google</button>
                 <br />
                 
             <p className="d-inline me-3">Create a new account here</p>
