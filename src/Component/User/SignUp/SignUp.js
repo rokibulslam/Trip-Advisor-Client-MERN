@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
-
+import {  useHistory, useLocation } from 'react-router-dom';
 const SignUp = () => {
-    const { signUp, error, setError, setName, name} = useAuth();
+    const { signUp, error, setError, setName, name, gooleSignIn, setUser, setIsLoading, reload, setUserName} = useAuth();
     const [email, setEmail] = useState('')
     const [password, setPassword]= useState('')
 
+    const history = useHistory()
+    const location = useLocation()
+    const url= location.state?.from || "/home"
+    
     const getName = (e) => {
         setName(e.target.value)
         if (!setName) {
@@ -35,7 +39,34 @@ const SignUp = () => {
              setError('Password Must contain 2 upper case')
       return;
         }
-        signUp(email, password);   
+        signUp(email, password)
+            .then(result => {
+                    setIsLoading(true)
+                    const user = result.user;
+                    setUserName()
+                    setUser(user)
+                    reload()
+                    setError('')
+                })
+                .catch(error => {
+                    const errorMessage = error.message;
+                    setError(errorMessage)
+                })
+                .finally(() => setIsLoading(false));
+    }
+    const HandleGooleSignIn = () => {
+        gooleSignIn()
+        .then(result => {
+                setIsLoading(true)
+                const user = result.user;
+                setUser(user)
+                history.push(url)
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                setError(errorMessage)
+            })
+            .finally(() => setIsLoading(false));
     }
      
     return (
@@ -63,7 +94,9 @@ const SignUp = () => {
                 <Button onClick={handleSignUp} className="mb-5 sign-in" type="submit">
                     Submit
                 </Button>
-            </Form>
+                <br />
+                </Form>
+                <button className="googlesign-in text-white d-flex" onClick={HandleGooleSignIn}><img className="mx-3" height="30px"  alt="" /> Sign in with google</button>
             </div>
         </div>
     );

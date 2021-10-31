@@ -22,7 +22,7 @@ const auth = getAuth();
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const [error, setError] = useState('')
-    
+    console.log(user)
     const [isLoading, setIsLoading] = useState(true)
     const [name, setName] = useState('')
     const gooleSignIn = () => {
@@ -35,20 +35,9 @@ const useFirebase = () => {
         window.location.reload()
     }
     const signUp = (email, password) => {
-        setIsLoading(true)
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const user = result.user;
-                setUser(user)
-                setUserName()
-                reload()
-                setError('')
-            })
-            .catch(error => {
-                const errorMessage = error.message;
-                setError(errorMessage)
-            })
-            .finally(() => setIsLoading(false));
+        
+        return createUserWithEmailAndPassword(auth, email, password)
+            
 
     }
     const setUserName = () => {
@@ -101,7 +90,7 @@ const useFirebase = () => {
         setError,
         name,
         setIsLoading,
-        setUser
+        setUser, setUserName, reload
     }
 
 }
