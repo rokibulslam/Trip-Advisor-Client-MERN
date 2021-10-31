@@ -57,6 +57,10 @@ const PlaceOrder = () => {
                 <input {...register("name", { required: true })} />
                 {errors.name && <p>This field is required</p>}
                 <br />
+                <p className="text-start">Phone no</p>
+                <input type="number" {...register("phone", { required: true })} />
+                {errors.phone && <p>This field is required</p>}
+                <br />
                 <p className="text-start">City</p>
                 <input {...register("city", { required: true })} />
                 {errors.city && <p>This field is required</p>}
