@@ -51,7 +51,7 @@ const MyOrders = () => {
                                     <tr>
                                         <td>1</td>
                                         <td>{order.name} <br />{order.city}<br />{order.country}<br />{order.email}<br />{order.phone}</td>
-                                        <td className="text-danger">{order.status}</td>
+                                        {order.status === 'Approved' ? <td className="text-primary">{order.status}</td>:<td className="text-danger">{order.status}</td>}
                                         <td>${order.service.price}<br />{order.service.name}</td>
                                         <td><button className="btn btn-danger" onClick={() => handleDelete(order._id)}>Cancel Order</button></td>
                                     </tr>
