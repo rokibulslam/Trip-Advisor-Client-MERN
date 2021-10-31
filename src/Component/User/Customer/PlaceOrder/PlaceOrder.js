@@ -44,7 +44,9 @@ const PlaceOrder = () => {
     
     return (
         <div className="container">
-            <h1>Place Your Booking </h1>
+            <h2>Place Your Booking </h2>
+            <h4><span className="text-danger text-start">Buyer Name:</span> {user?.displayName}</h4>
+            <h4><span className="text-danger text-start">Buyer Email:</span> {user?.email}</h4>
             <div className="row">
                 <div className="col-md-6 col-sm-12">
                     <img className="img-fluid" src={service?.img} alt="" />

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import './ManageOrder.css'
 
 const ManageOrder = () => {
     const [orders, setOrders] = useState([])
@@ -38,16 +39,18 @@ const ManageOrder = () => {
         }
     }
     return (
-        <div className="container pt-5">
+        <div  className = "mt-0 p-5 bg-order" >
+            <div className="container ">
             <div>
                 <h1 className="fw-light">Manage All Orders</h1>
-            <Table striped bordered hover>
+            <Table Table striped bordered hover variant = "dark" >
             <thead>
                 <tr>
                 <th>#</th>
                 <th>Ordered BY</th>
                 <th>Adress</th>
                 <th>Status</th>
+                <th>Manage Order</th>
                 </tr>
             </thead>
             {
@@ -57,13 +60,14 @@ const ManageOrder = () => {
                         <td>1</td>
                         <td>Customer Name: {order.name} <br />City :{order.city}<br />Country: {order.country}<br />Email: {order.email}<br />Phone No: {order.phone}</td>
                         <td>Service Price: ${order.service.price}<br />Service Name: {order.service.name}</td>
-                        <td className="text-danger">{order.status}</td>
+                        <td className="text-white">{order.status}</td>
                         <td><button className="btn btn-danger m-2" onClick={()=>handleDelete(order._id)}>Cancel Order</button> <br /><button className="btn btn-success" onClick={()=>handlePending(order._id)}>Approved Order</button></td>
                         </tr> 
                     </tbody>
                 ))        
             }
             </Table>
+        </div>
         </div>
         </div>
     );
