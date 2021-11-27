@@ -1,16 +1,20 @@
 # Welcome To My TRIP ADVISOR Demo Site
 
  ### Here is my live Demo site [Trip Advisor](https://trip-advisor-vip.web.app/).
+ 
+### This is a full stack MERN project
+### Features of TRIP ADVISOR
 
-### I have used modern tool to create this demo projects. Lets Exlpore
+    * A single-page web application is accomplished with firebase authentication.  
+    * Users can register with email and password or log in with their Gmail account instead of registering.
+    * Only registered users can book hotels and see product details. 
+    * If the user is not logged in, the private route redirects to the login page after clicking on the ‘Book-Now’ button. 
+    * After login, the user will be redirected to the page he/she wanted to go to. 
+    * Registered users can order, manage and cancel their orders and users' orders are saved in the database.
+    * User can see their order status on my order page.
 
-    * This is a full-stack web development Project
-    * I used Modern React framework for client side
-    * Also used Bootstrap to beautify the site 
-    * I have used most popular javascript runtime Node.js as backend language
-    * I used MongoDB for Database
-    * This website's authentication is made by firebase
-    * Deployed server at heroku 
-    * Some API has been created for multi-purpose use
+## Technology Used 
+    * HTML, CSS, Bootstrap, Firebase, React, Node.js, Express.js, JWT Token, Heroku, MongoDB, API, Axios.
+    
 
-## Google Sign in, user sign in with password and email has been added. this is a full stack development. I have made some API here using mongoDB and Node.js
+
