@@ -2,7 +2,7 @@
 
  ### Here is my live Demo site [Trip Advisor](https://trip-advisor-vip.web.app/).
  
-### This is a full stack MERN project
+### This is a MERN stack project
 ### Features of TRIP ADVISOR
 
     * A single-page web application is accomplished with firebase authentication.  
