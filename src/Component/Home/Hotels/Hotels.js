@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 import './Hotels.css'
 
 const Hotels = () => {
-    const [Hotels, setHotels] = useState([])
+  const [Hotels, setHotels] = useState([])
+  const {setIsLoading, isLoading}= useAuth()
 
-    useEffect(() => {
+  useEffect(() => {
+      setIsLoading(true)
         fetch("https://frightening-cat-78341.herokuapp.com/hotels")
-            .then(res => res.json())
-            .then(data=>setHotels(data))
+          .then((res) => res.json())
+          .then((data) => setHotels(data))
+          .finally(() => setIsLoading(false));
     }, [])
     
 
@@ -18,6 +22,7 @@ const Hotels = () => {
       <div className="bg-color">
         <h1 className="explore-header">Inspiration for your next trip.</h1>
         <div id="hotels" className="container py-5 ">
+          {isLoading && <Spinner animation="border" variant="danger" />}
           <div className="row">
             {Hotels?.map((hotel) => (
               <div key={hotel._id} className="col-md-3 g-4 col-sm-12">
