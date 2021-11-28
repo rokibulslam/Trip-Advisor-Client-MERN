@@ -16,10 +16,8 @@ const Hotels = () => {
 
     return (
       <div className="bg-color">
+        <h1 className="explore-header">Inspiration for your next trip.</h1>
         <div id="hotels" className="container py-5 ">
-          <h1 className="text-center p-5  fs-1 fw-bolder">
-            Inspiration for your next trip.
-          </h1>
           <div className="row">
             {Hotels?.map((hotel) => (
               <div key={hotel._id} className="col-md-3 g-4 col-sm-12">

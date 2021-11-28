@@ -1,16 +1,24 @@
 
 .service1 {
-    background-color: rgb(223 48 48);
+    background-color: red;
+    color: wheat;
+    padding: 30px 0 30px 0;
 }
 
 .service2 {
-    background-color: rgb(49 164 93);
+    background-color: rgb(17, 0, 255);
+    color: wheat;
+    padding: 30px 0 30px 0;
 }
 
 .service3 {
-    background-color: rgb(38 134 75);
+    background-color: rgb(0, 255, 0);
+    color: wheat;
+    padding: 30px 0 30px 0;
 }
 
 .service4 {
-    background-color: rgb(77 157 50);
+    background-color: rgb(255, 0, 255);
+    color: wheat;
+    padding: 30px 0 30px 0;
 }

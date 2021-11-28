@@ -7,13 +7,13 @@ import ServiceBar from '../ServiceBar/ServiceBar';
 
 const Home = () => {
     return (
-        <div>
-            <Banner></Banner>
-            <ServiceBar></ServiceBar>
-            <Services></Services>
-            <Article></Article>
-            <Info></Info>
-        </div>
+      <div>
+        <Banner></Banner>
+        <Services></Services>
+        <ServiceBar></ServiceBar>
+        <Article></Article>
+        <Info></Info>
+      </div>
     );
 };
 

@@ -1,19 +1,31 @@
 import React from 'react';
 import './Banner.css'
+import pic from '../../../images/tourist.jpeg'
+import { Button, Form } from 'react-bootstrap';
+
 
 const Banner = () => {
     return (
-        <div className = "banner banner d-flex banner align-items-center justify-content-center" >
-            <div className = "row" >
-            <div className="col-md-6 col-sm-12">
-                <h1 className="text-white fw-light fs-1">Free cancellation available! | Discounts on clean hotels, homes & flights | best price guarantee! | Over 20 million reviews | Safe & secure</h1>
-                </div>
-                <div className="col-md-6 col-sm-12">
-                    <h4 className="text-white">Not sure Where to go?</h4>
-                    <button className="rounded-pill p-3  fs-3 btn-text">I'm Flexible</button>
-                </div>
+      <div className="banner banner d-flex banner align-items-center justify-content-center">
+        <div className="row">
+          <Form>
+            <div className="search-bar d-flex justify-content-center align-items-center align-content-center flex-column p-5 rounded rounded-3">
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label className="fs-1 text-black ">
+                  Search Your Favourite Place
+                </Form.Label>
+                <Form.Control
+                  className="w-100 rounded-pill"
+                  type="text"
+                  placeholder="Search"
+                />
+              </Form.Group>
+              <button className="rounded  fs-3 btn-text">Search</button>
+            </div>
+          </Form>
         </div>
-        </div>
+        <div className="col-md-6 col-sm-12"></div>
+      </div>
     );
 };
 
