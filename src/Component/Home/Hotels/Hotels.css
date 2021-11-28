@@ -14,32 +14,15 @@
 }
 
 .card-style:hover {
-    border: 1px solid aquamarine;
+    border: 1px solid rgb(8, 219, 235);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: #abfa8c;
+    
     /* color: white; */
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #09e6ee 0%, #0044ff 51%, #3309ee )
+    background-color: rgb(76, 175, 80);
+    border: 0;
 }
 
-.btn-grad {
-    text-decoration: none;
-    margin: 10px;
-    padding: 15px 25px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    /* background-size: 200% auto; */
-    color: white;
-    border-radius: 10px;
-    display: block;
-}
 
-.btn-grad:hover {
-    background-position: right center;
-    /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-}

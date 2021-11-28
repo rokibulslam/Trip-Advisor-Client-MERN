@@ -1,5 +1,6 @@
+import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Spinner } from 'react-bootstrap';
+import { Card, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import './Hotels.css'
@@ -36,7 +37,7 @@ const Hotels = () => {
                     <Card.Title className="fw-bold">{hotel.name}</Card.Title>
                     <Card.Text>{hotel.Description.slice(0, 100)}</Card.Text>
                     <Link to={`/placeOrder/${hotel._id}`}>
-                      <Button className="btn-grad">Book Now</Button>
+                      <Button className="btn-grad px-4 py-2 rounded text-white">Book Now</Button>
                     </Link>
                   </Card.Body>
                 </Card>

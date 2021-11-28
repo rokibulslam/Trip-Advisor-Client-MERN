@@ -3,15 +3,15 @@
     font-size: 18px;
     font-weight: 900;
     text-align: center;
-    border: 2px solid #03ca03;
-    background-color: rgb(6, 252, 26);
+    border: 2px solid #ffffff;
+    background-color: rgba(6, 252, 27, 0);
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
 
 }
 
 .button:hover {
-    border: 2px solid aquamarine;
+    border: 2px solid rgb(227, 245, 239);
 }
 
 .nav-color {
