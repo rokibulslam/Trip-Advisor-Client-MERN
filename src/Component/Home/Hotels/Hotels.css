@@ -10,8 +10,8 @@
 .card-style:hover {
     border: 1px solid aquamarine;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: #272325;
-    color: white;
+    background-color: #abfa8c;
+    /* color: white; */
 }
 
 .btn-grad {
